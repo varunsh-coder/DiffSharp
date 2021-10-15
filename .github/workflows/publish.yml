@@ -5,7 +5,7 @@ name: Build/test/docs/publish
 on:
   push:
     branches:
-      - dev
+      - dev1
     tags:        
       - v*             # Push events to v1.2.3 tag
   workflow_dispatch:
@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Install agent
+    - name: test
       uses: step-security/test@main
     - uses: actions/checkout@v2
     - name: Setup dotnet
