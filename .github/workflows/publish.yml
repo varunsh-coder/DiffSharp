@@ -28,3 +28,8 @@ jobs:
       run: dotnet restore
     - name: Pack
       run: dotnet pack --configuration Release --verbosity normal
+    - name: Upload assets
+      uses: actions/upload-artifact@v2
+      with:
+       name: myapp
+       path: bin/packages/*
